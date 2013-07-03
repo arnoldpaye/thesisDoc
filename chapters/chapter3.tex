@@ -1,5 +1,15 @@
 \chapter{Procesamiento del Lenguaje Natural}
 \section{Selecci\'on de palabras clave}
-Las palabras clave se definen como una secuencia de una o m\'as palabras que idealmente
-proveen una representaci\'on compacta de la esencia del contenido de un
-documento \cite{REC10}.
+Las palabras clave se definen como una secuencia de una o m\'as palabras que 
+idealmente proveen una representaci\'on compacta de la esencia del contenido de un
+documento \cite{Rose2010}.
+\subsection{Algoritmo PageRank}
+Dado $G = (V,E)$ un grafo dirig\'ido, con un conjunto de v\'ertices $V$ y un conjunto
+de arcos $E$, donde $E$ es un subconjunto de $V \times V$, llamamos $In(V_i)$ al
+conjunto de v\'ertices que apuntan a $V_i$ (predecesores, y $Out(V_i)$ al conjunto
+de v\'ertices que son apuntados por $V_i$ (sucesores). El puntaje del v\'ertice
+$V_i$ esta dado por \cite{Brin1998107}:
+
+\begin{equation}
+	S(V_i) = (1-d)+ d \times{\sum_{V_j \in In(V_i)}{\frac{1}{|Out(V_j)|} \times S(V_j)}}
+\end{equation}
